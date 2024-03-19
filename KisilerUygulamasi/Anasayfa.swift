@@ -9,13 +9,18 @@ import SwiftUI
 
 struct Anasayfa: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            List{
+                
+            }.navigationTitle("Kişiler")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        NavigationLink(destination: KisiKayitSayfa()){
+                            Image(systemName:"plus")
+                        }
+                    }
+                }
         }
-        .padding()
     }
 }
 
