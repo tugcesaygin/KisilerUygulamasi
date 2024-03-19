@@ -12,7 +12,7 @@ struct KisiKayitSayfa: View {
     @State private var tfKisiTel=""
     
     func kaydet(kisi_ad: String, kisi_tel: String){  // MVVM'deki gibi textfield'dan gelecek lan değeri alıcak
-        print("Kiş Kaydet : \(kisi_ad) - \(kisi_tel)")  // consoleda görmek için
+        print("Kişi Kaydet : \(kisi_ad) - \(kisi_tel)")  // consoleda görmek için
     }
     
     

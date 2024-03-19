@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-struct KisilerSatir: View {
+struct KisilerSatir: View {   // satır tasarımı
+    var kisi = Kisiler()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 16 ) {
+            Text(kisi.kisi_ad!).font(.system(size: 25))
+            Text(kisi.kisi_tel!).font(.system(size: 20)).foregroundStyle(.gray)
+        }
     }
 }
 
