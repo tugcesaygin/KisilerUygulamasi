@@ -24,7 +24,7 @@ struct KisiKayitSayfa: View {
             Button("KAYDET"){
                 kaydet(kisi_ad: tfKisiAdi, kisi_tel: tfKisiTel) // evet yukarıdaki açıklama
             }
-        }.navigationTitle("Kişi Kayıt")
+        }.navigationTitle("Kişi Kayıt ")
     }
 }
 
