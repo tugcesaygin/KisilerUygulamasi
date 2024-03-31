@@ -12,6 +12,13 @@ struct Anasayfa: View {
     
     @State private var aramaKelimesi = ""
 
+    
+    func sil(at offsets:IndexSet){ //hangi satırı sildiysek onun satırını vericek
+        let kisi = kisilerListesi[offsets.first!] //sildiğimiz kişi nesnesini vericek  , bilgi
+        kisilerListesi.remove(at: offsets.first!) //gerçekten siler
+        print("kişi sil : \(kisi.kisi_id!)")
+    }
+    
     var body: some View {
         NavigationStack{
             List{
@@ -21,7 +28,9 @@ struct Anasayfa: View {
                         KisilerSatir(kisi: kisi) //kişiler listesindeki satırlarda kişilerin bilgilerini tasarımı. kişiler listesindeki kişikeri tasarıma aktarıyo, 
                     }
                     
-                }
+                }.onDelete(perform: sil) //bir fonk istiyor
+                
+                
             }.navigationTitle("Kişiler")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing){
