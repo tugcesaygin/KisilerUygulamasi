@@ -13,7 +13,7 @@ struct KisiDetaySayfa: View {
     
     var kisi = Kisiler() // Kisiler sınıfından bir kisi nesnesi gönderiyoruz buraya
     
-    func guncelle(kisi_id :Int,kisi_ad: String, kisi_tel: String){  // MVVM'deki gibi textfield'dan gelecek lan değeri alıcak
+    func guncelle(kisi_id :Int,kisi_ad: String, kisi_tel: String){  // MVVM'deki gibi textfield'dan gelecek olan değeri alıcak
         
         print("Kişi Güncelle :\(kisi_id) -  \(kisi_ad) - \(kisi_tel)")  //sadece cosoleda değişim var
     }
