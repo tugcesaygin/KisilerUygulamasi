@@ -30,6 +30,14 @@ class AnasayfaViewModel : ObservableObject{
     }
     
     
+    //vt altyapısı henüz olmadığı için sadece fonksiyon ile simüle edicez silmeyi ve araa işlemini
     
+    func ara(aramaKelimesi: String){
+        print("Kişi ara : \(aramaKelimesi)")
+    }
+    
+    func sil(kisi_id: Int){
+        print("kisi sil : \(kisi_id)")
+    }
     
 }

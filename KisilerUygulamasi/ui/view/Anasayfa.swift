@@ -17,7 +17,7 @@ struct Anasayfa: View {
     func sil(at offsets:IndexSet){ //hangi satırı sildiysek onun satırını vericek
         let kisi = viewModel.kisilerListesi[offsets.first!] //sildiğimiz kişi nesnesini vericek  , bilgi
         viewModel.kisilerListesi.remove(at: offsets.first!) //gerçekten siler
-        print("kişi sil : \(kisi.kisi_id!)")
+        viewModel.sil(kisi_id: kisi.kisi_id!)
     }
     
     var body: some View {
@@ -44,7 +44,7 @@ struct Anasayfa: View {
                 }
         }.searchable(text: $aramaKelimesi , prompt: "Ara") //aramaKelime'sinin değerini ifade ediyomuş $
             .onChange(of: aramaKelimesi,initial: true){ initial,sonuc in
-                print("Kişi ara : \(sonuc)")
+                viewModel.ara(aramaKelimesi: sonuc)
             }
     }
 }
